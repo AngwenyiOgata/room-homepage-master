@@ -55,6 +55,12 @@ body {
   color: var(--White);
   font-size: 0.8rem;
   font-weight: 500;
+  transition:  border-bottom .5s ease-in-out;
+}
+.app__header-ul li a:active,
+.app__header-ul li a:focus,
+.app__header-ul li a:hover{
+  border-bottom: 1px solid var(--White);
 }
 .app__main {
   width: 100%;
@@ -123,11 +129,22 @@ body {
   color: var(--Black);
   letter-spacing: 0.3rem;
   font-weight: 500;font-size: 1rem;
+  transition: color .5s ease-in-out;
 }
 .app__main-slider-link .arrow{
   margin-left: 1rem;
+  transition: fill .5s ease-in-out;
 }
-
+.app__main-slider-link:active .text,
+.app__main-slider-link:focus .text,
+.app__main-slider-link:hover .text{
+  color: var(--Dark-Gray);
+}
+.app__main-slider-link:active .arrow path,
+.app__main-slider-link:focus .arrow path,
+.app__main-slider-link:hover .arrow path{
+  fill: var(--Dark-Gray);
+}
 .app__main-slider-container-buttons {
   background-color: var(--Black);
   position: absolute;
@@ -148,11 +165,20 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: background-color .5s ease-in-out;
 }
 .app__main-slider-container-buttons .arrow-right img,
 .app__main-slider-container-buttons .arrow-left img {
   width: 15%;
   align-self: center;
+}
+.app__main-slider-container-buttons .arrow-right:focus,
+.app__main-slider-container-buttons .arrow-left:active,
+.app__main-slider-container-buttons .arrow-right:focus,
+.app__main-slider-container-buttons .arrow-left:active,
+.app__main-slider-container-buttons .arrow-right:hover,
+.app__main-slider-container-buttons .arrow-left:hover{
+  background-color: var(--Very-Dark-Gray);
 }
 
 .app__main-about{
